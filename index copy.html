@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue Mastery</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./assets/stylescopy.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app" class="bulb-container">
+      <p></p>
+      <div v-if="status">
+        <img src="./assets/images/glope-on.png">
+      </div>
+      <div v-else="!status">
+        <img src="./assets/images/glope-off.png">
+      </div>
+      <button v-on:click="status = !status" class="bulb-image">Switch on/off</button>
+    </div>
+
+    <!-- Import App -->
+    <script src="./maincopy.js"></script>
+
+    <!-- Mount App -->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
+  </body>
+</html>
